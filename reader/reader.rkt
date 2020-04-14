@@ -3,7 +3,7 @@
 
 (define (read-syntax path port)
   (define parse-tree (parse path (make-tokenizer port)))
-  (define module-datum `(module tclang-mod "../expander/expander.rkt"
+  (define module-datum `(module bf-mod "../expander/expander.rkt"
                           ,parse-tree))
   (datum->syntax #f module-datum))
 (provide read-syntax)
@@ -13,7 +13,7 @@
   (define (next-token)
     (define bf-lexer
       (lexer
-       [(char-set "><-.,+[]") lexeme]
+       [(char-set "RL-.,+[]") lexeme]
        [any-char (next-token)]))
-    (bf-lexer port))  
+    (bf-lexer port))
   next-token)
