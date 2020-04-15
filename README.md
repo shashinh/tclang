@@ -7,7 +7,7 @@ Each + in the string increments the current byte by 1, and each - minus decremen
 
 ## The Grammar
 The grammar for tclang is defined as below
-![grammar](https://github.com/shashinh/tclang/blob/master/grammar.png)
+![grammar-pic](https://github.com/shashinh/tclang/blob/master/grammar.png)
 
 ## Generation of a parse tree
 Parsing the given input string against the grammar defined in parser.rkt and building the parse tree
